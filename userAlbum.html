@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <div id="albums">
+      <h1>AWS Photo Album</h1>
+      <div id = "creators">
+        <h2> Sahar Malka 203665518 </br> Amitai Biton 307988592</h2>
+      </div>
+      <h3><div id="greetings"> Hello, User</div></h3>
+      <h3><div id="email"></div></h3>
+
+      <a href = "https://amitaibiton.auth.us-east-2.amazoncognito.com/logout?client_id=32330iomvoeli5jbodjcman7cn&logout_uri=https://aws.saharmalka.repl.co/">Logout</a>
+      </br>
+      <button
+        id="addAlbum"
+      >
+        Add New Image
+      </button>
+      <button
+        class="seeAlbum"
+      >
+        See Album
+      </button>
+      <button
+        id="delete_image"
+      >
+        Delete Image
+      </button>
+      <div id="myModal1" class="modal1">
+
+        <!-- Modal content -->
+        <div class="modal-content1">
+          <span class="close1">&times;</span>
+          <div id="image"></div>          
+          
+        </div>
+      
+      </div>
+
+
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1> Add New Photo </h1>
+
+          <form >
+            <label for="lname">Link:</label>
+            <input type="text" id="lname" class="inputImage"><br><br>
+
+            <label >Date:</label>
+            <input type="date" id="Date" class="inputImage" name="birthday" size="50" ><br><br>
+
+            <label >Key:</label>
+            <input type="number" id="Key" class="inputImage" required ><br><br>
+
+            <button class="new_image">Add</button>
+          </form>
+        </div>
+      
+      </div>
+      <div id="myModal2" class="modal2">
+
+        <!-- Modal content -->
+        <div class="modal-content2">
+          <span class="close2">&times;</span>
+          <h1> Add New Photo </h1>
+
+          <form >
+            
+
+            <label >Key:</label>
+            <input type="text" id="Key_input" class="image_key" ><br><br>
+
+            <button class="Delete">Delete</button>
+          </form>
+        </div>
+      
+      </div>
+      
+               
+    </div>
+    <div id="pictures">
+      
+      <div id="filters">
+        Sort By:
+         <button class="smallButton" id="sortKey">Key</button>
+         <button class="smallButton" id="sortDate">Date</button>
+      </div>
+      
+      <table id="picturesTable">
+      </table>
+    </div>
+
+  </body>
+</html>

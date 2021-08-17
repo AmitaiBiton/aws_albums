@@ -1,0 +1,322 @@
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #e0dede11;
+  width: 99%;
+}
+
+#creators{
+  margin-bottom: 80px;
+}
+
+table {
+  margin: 0 auto;
+  border: 2px solid rgba(60, 216, 107, 0.637);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+tr {
+  padding-right: 25px;
+}
+
+td {
+  padding: 15px 30px;
+  margin: 0 auto;
+}
+
+#albums {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#pictures {
+  margin: 0 auto;
+  width: 1300px;
+  text-align: center;
+  visibility: hidden;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #333333;
+  line-height: 56px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  margin: 40px 0px 20px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 14px;
+  color: #22222286;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+h3 {
+  color: #2222225e;
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 0px;
+  font-weight: 100;
+}
+
+img {
+  width: 250px;
+}
+
+.albumButtons  {
+  background: rgba(60, 216, 107, 0.637);
+  border: 0px solid #ffffff;
+  width: 100px;
+  padding: 15px 40px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.albumButtons:hover {
+  cursor: pointer;
+  position: relative;
+  background: rgba(98, 212, 132, 0.384);
+}
+
+.regularButton{
+  background: rgba(124, 1, 161, 0.637);
+  border: 0px solid #ffffff;
+  width: 250px;
+  padding: 20px 45px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.regularButton:hover {
+  cursor: pointer;
+  position: relative;
+  background: rgba(174, 87, 224, 0.384);
+}
+
+a{
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:link {
+  color: #ffffff;
+  background-color: rgba(124, 1, 161, 0.637);
+  padding: 8px;
+}
+
+/* visited link */
+a:visited {
+  color: #ffffff;
+}
+
+/* mouse over link */
+a:hover {
+  background: rgba(174, 87, 224, 0.384);
+}
+
+/* selected link */
+a:active {
+  color: #ffffff;
+}
+
+
+
+#addAlbum ,.seeAlbum , #delete_image {
+  background: rgba(124, 1, 161, 0.637);
+  border: 0px solid #ffffff;
+  width: 250px;
+  padding: 20px 45px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.new_image ,.Delete {
+  background: rgba(124, 1, 161, 0.637);
+  border: 0px solid #ffffff;
+  width: 150px;
+  padding: 20px 45px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.new_image:hover ,Delete:hover{
+  cursor: pointer;
+  position: relative;
+  background: rgba(174, 87, 224, 0.384);
+}
+.inputImage ,.image_key{
+  box-sizing: border-box;
+  width: 50%;
+  border: solid rgba(60, 216, 107, 0.637) 5px;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+#addAlbum:hover ,.seeAlbum:hover , #delete_image:hover{
+  cursor: pointer;
+  position: relative;
+  background: rgba(174, 87, 224, 0.384);
+}
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.modal , .modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content , .modal-content2  {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+/* The Close Button */
+.close ,.close2{
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus  , close2:hover ,.close2:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close1:hover,
+.close1:focus   {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close1 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-content1 {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 60px;
+  border: 1px solid #888;
+  width: 60%;
+}
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#filters{
+  font-size: 14px;
+  color: #22222286;
+  font-weight: 300;
+  float: left;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  visibility: hidden;
+}
+
+
+.smallButton{
+  background: rgba(124, 1, 161, 0.637);
+  border: 0px solid #ffffff;
+  width: 100px;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  font-size: small;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.smallButton:hover {
+  cursor: pointer;
+  position: relative;
+  background: rgba(174, 87, 224, 0.384);
+}
+
+#picturesTable{
+  margin-top: 130px;
+}
